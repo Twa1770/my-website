@@ -1,12 +1,142 @@
-HTML
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
- <title>website yangu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration Form</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#2563eb);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    background:white;
+    width:90%;
+    max-width:700px;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+h2{
+    text-align:center;
+    color: blue;
+    margin-bottom:20px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+label{
+    display:block;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.gender{
+    display:flex;
+    gap:20px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background: blue;
+}
+</style>
+
 </head>
 <body>
- <h1>karibu kwenye website yangu</h1>
- <p>hii ni website iliyotengenezwa kwa 
-Github.</p>
+
+<div class="container">
+    <h2><marquee>Student Registration Form</marquee></h2>
+
+    <form>
+
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" required>
+        </div>
+
+        <div class="form-group">
+            <label>Student ID</label>
+            <input type="text" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" required>
+        </div>
+
+        <div class="form-group">
+            <label>Date of Birth</label>
+            <input type="date" required>
+        </div>
+
+        <div class="form-group">
+            <label>Programme</label>
+            <select required>
+                <option value="">Select Programme</option>
+                <option>Computer Science</option>
+                <option>Information Technology</option>
+                <option>Business Administration</option>
+                <option>Education</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Gender</label>
+            <div class="gender">
+                <label><input type="radio" name="gender"> Male</label>
+                <label><input type="radio" name="gender"> Female</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Home Address</label>
+            <textarea rows="4"></textarea>
+        </div>
+
+        <button type="submit">Register</button>
+
+    </form>
+</div>
+
 </body>
 </html>
